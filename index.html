@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>card memory game</title>
+  <link href="css.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+  <!-- css animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+
+<div id="container">
+
+  <div id="topInfoContainer">
+    <div id="selectButtonsContainer">
+      <button class="selectButtons" onclick="select6()">Select 6</button>
+      <button class="selectButtons" onclick="select12()">Select 12</button>
+    </div>
+    <p id="movesCountInfo">Moves Count <span id="movesCount"></span></p>
+    <h3 id="timerInfo"></h3>
+  </div>
+
+  <div id="buttonsContainer">
+    <div id="invisibleOverlayDiv"></div>
+  </div>
+
+  <div id="gameOverContainer"></div>
+</div>
+
+<script src="js.js"></script>
+</body>
+</html>

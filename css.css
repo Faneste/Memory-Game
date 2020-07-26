@@ -1,0 +1,148 @@
+body {
+  padding: 0;
+  padding-top: 30px;
+  margin: 0;
+  height: auto;
+  font-family: 'Chewy', cursive;
+
+  background-color: #1b7da6;
+  background-image: url("images/background.png");
+  background-repeat: repeat;
+}
+
+#container {
+  width: 400px;
+  margin: 0px auto;
+  display: grid;
+  border-radius: 10px;
+  overflow: hidden;
+  grid-template-columns: auto;
+  grid-auto-rows: auto auto auto;
+  grid-template-areas:
+  "infoTop"
+  "buttons"
+  "infoBottom";
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.75);
+}
+
+/* ////////// TOP INFO AND BUTTONS ///////////// */
+
+#topInfoContainer {
+  grid-area: infoTop;
+  background-color: #0d4c67;
+  color: white;
+  padding: 20px;
+}
+
+.selectButtons {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1.2em;
+  color: #1b7da6;
+  border: none;
+  cursor: pointer;
+  font-family: 'Chewy', cursive;
+}
+
+.selectButtons:hover {
+  background-color: #1b7da6;
+  color: white;
+}
+
+#movesCountInfo {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+#movesCountSpan {
+  color: darkorange;
+}
+
+#timerInfo {
+  width: 100%;
+  height: 30px;
+  padding-top: 5px;
+  margin: 5px 0px 10px 0px;
+  border-radius: 10px;
+  background-color: #136a8f;
+  font-size: 1.2em;
+  color: white;
+  text-align: center;
+}
+
+/* ////////// GAME BUTTONS ///////////// */
+
+#buttonsContainer {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  background-color: #136a8f;
+  margin: 0px auto;
+  grid-area: buttons;
+}
+
+.button {
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
+  background-color: darkorange;
+  display: inline-block;
+  margin: 11px;
+  visibility: visible;
+  z-index: 1;
+  cursor: pointer;
+  vertical-align:top;
+}
+
+.buttonHidden {
+  width: 110px;
+  height: 110px;
+  background-color: grey;
+  display: inline-block;
+  margin: 10px;
+  vertical-align:top;
+  opacity: 0;
+}
+
+#invisibleOverlayDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: purple;
+  display: none;
+  opacity: 0;
+}
+
+.false {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  z-index: 0;
+}
+
+.true {
+  visibility: visible;
+  /* background-color: orange; */
+  z-index: 0;
+}
+
+/* ////////// BOTTOM INFO ///////////// */
+
+#gameOverContainer {
+  grid-area: infoBottom;
+  background-color: #0d4c67;
+  color: darkorange;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  font-size: 1.2em;
+}
