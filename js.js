@@ -101,6 +101,9 @@ function buildButtons() {
 }
 
 function buttonClicked(button) {
+  const click = new Audio('sound/click.wav');
+  click.volume = 0.5;
+  click.play();
 
   movesCount++;
   document.getElementById("movesCount").innerHTML = `<span id="movesCountSpan">${movesCount}</span>`;
@@ -120,6 +123,9 @@ function buttonClicked(button) {
   if (selected[1].sign) {
     if (selected[0].sign === selected[1].sign) {
       let imgAnimate = document.getElementsByClassName("true");
+      const win = new Audio('sound/win.wav');
+      win.volume = 0.5;
+      win.play();
       // backwards loop bcs index of html element is changing with html coll.
       for (var i = 0; i < imgAnimate.length; i++) {
         imgAnimate[i].classList.add( "animated", "zoomOut");
